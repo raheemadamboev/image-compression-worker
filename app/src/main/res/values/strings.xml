@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ImageCompressionWorker</string>
+
+    <!-- Main -->
+    <string name="uncompressed_photo">Uncompressed photo:</string>
+    <string name="compressed_photo">Compressed photo:</string>
 </resources>
