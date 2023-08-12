@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -71,6 +73,10 @@ dependencies {
 
     // workmanager
     implementation "androidx.work:work-runtime-ktx:2.8.1"
+
+    // hilt
+    implementation 'com.google.dagger:hilt-android:2.47'
+    kapt 'com.google.dagger:hilt-compiler:2.47'
 
     // coil
     implementation "io.coil-kt:coil-compose:2.4.0"
