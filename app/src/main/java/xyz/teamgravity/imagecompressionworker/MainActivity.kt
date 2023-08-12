@@ -32,6 +32,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        checkImage(intent)
         setContent {
             ImageCompressionWorkerTheme {
                 Surface(
@@ -67,6 +68,10 @@ class MainActivity : ComponentActivity() {
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
+        checkImage(intent)
+    }
+
+    private fun checkImage(intent: Intent?) {
         val image =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) intent?.getParcelableExtra(Intent.EXTRA_STREAM, Uri::class.java)
             else intent?.getParcelableExtra(Intent.EXTRA_STREAM)
